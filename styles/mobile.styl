@@ -8,21 +8,21 @@ $mobileSidebarWidth = $sidebarWidth * 0.82
     font-size 15px
     width $mobileSidebarWidth
   .page
-    padding-left $mobileSidebarWidth
+    padding-{start-dir} $mobileSidebarWidth
 
 // wide mobile
 @media (max-width: $MQMobile)
   .sidebar
     top 0
     padding-top $navbarHeight
-    transform translateX(-100%)
+    transform translateX((-100 * trans-dir)%)
     transition transform .2s ease
   .page
-    padding-left 0
+    padding-{start-dir} 0
   .theme-container
     &.sidebar-open
       .sidebar
-        transform translateX(0)
+        transform translateX(0 * trans-dir)
     &.no-navbar
       .sidebar
         padding-top: 0

@@ -78,8 +78,10 @@ function renderChildren (h, children, path, route, maxDepth, depth = 1) {
 </script>
 
 <style lang="stylus">
+@require '../styles/direction-variables'
+
 .sidebar .sidebar-sub-headers
-  padding-left 1rem
+  padding-{start-dir} 1rem
   font-size 0.95em
 
 a.sidebar-link
@@ -87,7 +89,7 @@ a.sidebar-link
   font-weight 400
   display inline-block
   color $textColor
-  border-left 0.25rem solid transparent
+  border-{start-dir} 0.25rem solid transparent
   padding 0.35rem 1rem 0.35rem 1.25rem
   line-height 1.4
   width: 100%
@@ -97,13 +99,13 @@ a.sidebar-link
   &.active
     font-weight 600
     color $accentColor
-    border-left-color $accentColor
+    border-{start-dir}-color $accentColor
   .sidebar-group &
-    padding-left 2rem
+    padding-{start-dir} 2rem
   .sidebar-sub-headers &
     padding-top 0.25rem
     padding-bottom 0.25rem
-    border-left none
+    border-{start-dir} none
     &.active
       font-weight 500
 </style>

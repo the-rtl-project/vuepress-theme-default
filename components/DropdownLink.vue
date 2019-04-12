@@ -77,6 +77,8 @@ export default {
 </script>
 
 <style lang="stylus">
+@require '../styles/direction-variables'
+
 .dropdown-wrapper
   cursor pointer
   .dropdown-title
@@ -86,7 +88,7 @@ export default {
     .arrow
       vertical-align middle
       margin-top -1px
-      margin-left 0.4rem
+      margin-{start-dir} 0.4rem
   .nav-dropdown
     .dropdown-item
       color inherit
@@ -94,7 +96,10 @@ export default {
       h4
         margin 0.45rem 0 0
         border-top 1px solid #eee
-        padding 0.45rem 1.5rem 0 1.25rem
+        padding-top 0.45rem
+        padding-{end-dir} 1.5rem
+        padding-bottom 0
+        padding-{start-dir} 1.25rem
       .dropdown-subitem-wrapper
         padding 0
         list-style none
@@ -107,7 +112,10 @@ export default {
         border-bottom none
         font-weight 400
         margin-bottom 0
-        padding 0 1.5rem 0 1.25rem
+        padding-top 0
+        padding-{end-dir} 1.5rem
+        padding-bottom 0
+        padding-{start-dir} 1.25rem
         &:hover
           color $accentColor
         &.router-link-active
@@ -116,12 +124,12 @@ export default {
             content ""
             width 0
             height 0
-            border-left 5px solid $accentColor
+            border-{start-dir} 5px solid $accentColor
             border-top 3px solid transparent
             border-bottom 3px solid transparent
             position absolute
             top calc(50% - 2px)
-            left 9px
+            {start-dir} 9px
       &:first-child h4
         margin-top 0
         padding-top 0
@@ -154,8 +162,8 @@ export default {
       display block !important
     .dropdown-title .arrow
       // make the arrow always down at desktop
-      border-left 4px solid transparent
-      border-right 4px solid transparent
+      border-{start-dir} 4px solid transparent
+      border-{end-dir} 4px solid transparent
       border-top 6px solid $arrowBgColor
       border-bottom 0
     .nav-dropdown
@@ -167,12 +175,12 @@ export default {
       overflow-y auto
       position absolute
       top 100%
-      right 0
+      {end-dir} 0
       background-color #fff
       padding 0.6rem 0
       border 1px solid #ddd
       border-bottom-color #ccc
-      text-align left
+      text-align start-dir
       border-radius 0.25rem
       white-space nowrap
       margin 0

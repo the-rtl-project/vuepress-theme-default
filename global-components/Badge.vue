@@ -24,6 +24,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@require '../styles/direction-variables'
+
 .badge
   display inline-block
   font-size 14px
@@ -40,5 +42,5 @@ export default {
   &.warning, &.warn, &.yellow
     background-color darken(#ffe564, 35%)
   & + &
-    margin-left 5px
+    margin-{start-dir} 5px
 </style>

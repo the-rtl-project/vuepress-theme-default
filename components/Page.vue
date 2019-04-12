@@ -194,6 +194,7 @@ function flatten (items, res) {
 
 <style lang="stylus">
 @require '../styles/wrapper.styl'
+@require '../styles/direction-variables'
 
 .page
   padding-bottom 2rem
@@ -208,7 +209,7 @@ function flatten (items, res) {
     display inline-block
     a
       color lighten($textColor, 25%)
-      margin-right 0.25rem
+      margin-{end-dir} 0.25rem
   .last-updated
     float right
     font-size 0.9em
@@ -230,7 +231,7 @@ function flatten (items, res) {
     padding-top 1rem
     overflow auto // clear float
   .next
-    float right
+    float end-dir
 
 @media (max-width: $MQMobile)
   .page-edit
@@ -239,6 +240,6 @@ function flatten (items, res) {
     .last-updated
       font-size .8em
       float none
-      text-align left
+      text-align start-dir
 
 </style>

@@ -86,6 +86,8 @@ function css (el, property) {
 </script>
 
 <style lang="stylus">
+@require '../styles/direction-variables'
+
 $navbar-vertical-padding = 0.7rem
 $navbar-horizontal-padding = 1.5rem
 
@@ -97,7 +99,7 @@ $navbar-horizontal-padding = 1.5rem
   .logo
     height $navbarHeight - 1.4rem
     min-width $navbarHeight - 1.4rem
-    margin-right 0.8rem
+    margin-{end-dir} 0.8rem
     vertical-align top
   .site-name
     font-size 1.3rem
@@ -105,13 +107,13 @@ $navbar-horizontal-padding = 1.5rem
     color $textColor
     position relative
   .links
-    padding-left 1.5rem
+    padding-{start-dir} 1.5rem
     box-sizing border-box
     background-color white
     white-space nowrap
     font-size 0.9rem
     position absolute
-    right $navbar-horizontal-padding
+    {end-dir} $navbar-horizontal-padding
     top $navbar-vertical-padding
     display flex
     .search-box
@@ -120,9 +122,9 @@ $navbar-horizontal-padding = 1.5rem
 
 @media (max-width: $MQMobile)
   .navbar
-    padding-left 4rem
+    padding-{start-dir} 4rem
     .can-hide
       display none
     .links
-      padding-left 1.5rem
+      padding-{start-dir} 1.5rem
 </style>

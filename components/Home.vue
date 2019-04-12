@@ -71,6 +71,8 @@ export default {
 </script>
 
 <style lang="stylus">
+@require '../styles/direction-variables'
+
 .home
   padding $navbarHeight 2rem 0
   max-width 960px
@@ -141,8 +143,8 @@ export default {
 
 @media (max-width: $MQMobileNarrow)
   .home
-    padding-left 1.5rem
-    padding-right 1.5rem
+    padding-{start-dir} 1.5rem
+    padding-{end-dir} 1.5rem
     .hero
       img
         max-height 210px

@@ -60,6 +60,8 @@ export default {
 </script>
 
 <style lang="stylus">
+@require '../styles/direction-variables'
+
 .algolia-search-wrapper
   & > span
     vertical-align middle
@@ -72,7 +74,7 @@ export default {
       font-size 16px
       margin 6px 0 0
       padding 4px
-      text-align left
+      text-align start-dir
       &:before
         border-color #999
       [class*=ds-dataset-]
@@ -103,7 +105,10 @@ export default {
         color $textColor
       .algolia-docsearch-suggestion--subcategory-column
         vertical-align top
-        padding 5px 7px 5px 5px
+        padding-top 5px
+        padding-{end-dir} 7px
+        padding-bottom 5px
+        padding-{start-dir} 5px
         border-color $borderColor
         background #f1f3f5
         &:after
@@ -139,7 +144,11 @@ export default {
       min-width calc(100vw - 4rem) !important
       max-width calc(100vw - 4rem) !important
     .algolia-docsearch-suggestion--wrapper
-      padding 5px 7px 5px 5px !important
+      padding-top 5px !important
+      padding-{end-dir} 7px !important
+      padding-bottom 5px !important
+      padding-{start-dir} 5px !important
+
     .algolia-docsearch-suggestion--subcategory-column
       padding 0 !important
       background white !important
