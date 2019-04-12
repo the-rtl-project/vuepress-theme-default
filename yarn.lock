@@ -103,6 +103,10 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
+"@the-rtl-project/vuepress-plugin-search@https://github.com/the-rtl-project/vuepress-plugin-search#master":
+  version "1.0.0-alpha.47.x"
+  resolved "https://github.com/the-rtl-project/vuepress-plugin-search#6ec62b3676a4a29ba7bf14096af7bd720937d3f5"
+
 "@vuepress/plugin-active-header-links@^1.0.0-alpha.47":
   version "1.0.0-alpha.47"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-active-header-links/-/plugin-active-header-links-1.0.0-alpha.47.tgz#7e4e0e03c47d632e98e2d71a3e132722f40f34be"
@@ -116,11 +120,6 @@
   integrity sha512-EzdZ9GqT2H3PzCI4Ddp8EJh0bfe9EcbgIhKnl2fK7mH5RUt7RthDstn5pOhKpAjEC+e1NvH9NGd0pPzLsa0xcQ==
   dependencies:
     nprogress "^0.2.0"
-
-"@vuepress/plugin-search@^1.0.0-alpha.47":
-  version "1.0.0-alpha.47"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-search/-/plugin-search-1.0.0-alpha.47.tgz#4463927edd915ee38fbe08510f4398ff9da43ab0"
-  integrity sha512-Cc0Pckzv4bspfOFecvubazirnZMPbaT4B4KT3KPknrqCfW0Uiv4sSxXEAtzMCB+UF6P7Dlt50SfI/2MO7k58xg==
 
 abbrev@1:
   version "1.1.1"

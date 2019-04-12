@@ -19,7 +19,7 @@ module.exports = (options, ctx) => ({
 
   plugins: [
     ['@vuepress/active-header-links', options.activeHeaderLinks],
-    '@vuepress/search',
+    '@the-rtl-project/search',
     '@vuepress/plugin-nprogress',
     ['container', {
       type: 'tip',
