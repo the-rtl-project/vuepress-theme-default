@@ -14,7 +14,9 @@
     "documentation",
     "vue",
     "vuepress",
-    "generator"
+    "generator",
+    "rtl",
+    "right-to-left"
   ],
   "author": "Evan You",
   "maintainers": [
