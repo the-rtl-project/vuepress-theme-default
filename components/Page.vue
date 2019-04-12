@@ -32,7 +32,7 @@
           v-if="prev"
           class="prev"
         >
-          ←
+          <span class="prev-arrow" />
           <router-link
             v-if="prev"
             class="prev"
@@ -52,7 +52,7 @@
           >
             {{ next.title || next.path }}
           </router-link>
-          →
+          <span class="next-arrow" />
         </span>
       </p>
     </div>
@@ -241,5 +241,17 @@ function flatten (items, res) {
       font-size .8em
       float none
       text-align start-dir
+
+span.prev-arrow::after
+  if rtl
+    content "→"
+  else
+    content "←"
+
+span.next-arrow::after
+  if rtl
+    content "←"
+  else
+    content "→"
 
 </style>
